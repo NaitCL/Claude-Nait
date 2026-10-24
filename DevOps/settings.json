@@ -1,0 +1,50 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit(./documentacion/**)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch *)",
+      "Bash(git checkout -b *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(ansible-lint *)",
+      "Bash(yamllint *)",
+      "Bash(ansible-playbook * --syntax-check*)",
+      "Bash(ansible-playbook * --list-tasks*)",
+      "Bash(ansible-playbook * --list-hosts*)",
+      "Bash(ansible-playbook * -i inventories/staging* --limit <hostname-staging>*)"
+    ],
+    "deny": [
+      "Bash(git push *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)",
+      "Bash(git reset --hard *)",
+      "Bash(git checkout main*)",
+      "Bash(git checkout master*)",
+      "Bash(ansible-vault *)",
+      "Bash(ansible-playbook * --limit all*)",
+      "Bash(ansible-playbook * -i inventories/prod*)",
+      "Bash(ansible-playbook * -i inventories/qa*)",
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(rm -rf *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Read(./.env*)",
+      "Read(./**/*vault*)",
+      "Read(./**/*.pem)",
+      "Read(./**/*.key)",
+      "Read(./**/secrets/**)",
+      "Edit(./inventories/prod*/**)",
+      "Edit(./inventories/qa*/**)",
+      "Edit(./<ruta-roles-instalados>/**)"
+    ],
+    "ask": [
+      "Bash(ansible-galaxy *)",
+      "Bash(pip *)"
+    ]
+  }
+}
